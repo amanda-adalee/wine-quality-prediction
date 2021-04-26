@@ -17,7 +17,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # load model
-svc = pickle.load(open('svc.pkl','rb'))
+#svc = pickle.load(open('svc.pkl','rb'))
 app = Flask(__name__)
 
 
@@ -42,8 +42,7 @@ def home():
         ph = request.form['ph']
         sulphates = request.form['sulphates']
         alcohol = request.form['alcohol']
-        prediction = predict(fixed_acidity, volatile_acidity, citric_acid, residual_sugar, chlorides,
-                             free_sulfur_dioxide, total_sulfur_dioxide, density, ph, sulphates, alcohol)
+        prediction = predict(fixed_acidity, volatile_acidity, citric_acid, residual_sugar, chlorides,free_sulfur_dioxide, total_sulfur_dioxide, density, ph, sulphates, alcohol)
     else:
         return render_template("web.html")
 
@@ -74,11 +73,11 @@ def predict(facid, vacid, cacid, rs, ch, fsd, tsd, den, ph, sul, alc):
     user_data = [facid, vacid, cacid, rs, ch, fsd, tsd, den, ph, sul, alc]
     user_data_asarray = numpy.asarray(user_data)
     reshaped_data = user_data_asarray.reshape(1, -1)
-    prediction = svc.predict(reshaped_data)
-    if prediction[0] == 0:
-        return ("Poor Quality Wine")
-    else:
-        return ("High Quality Wine")
+    # prediction = svc.predict(reshaped_data)
+    # if prediction[0] == 0:
+    #     return ("Poor Quality Wine")
+    # else:
+    #     return ("High Quality Wine")
 
 
 if __name__ == "__main__":
