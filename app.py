@@ -17,8 +17,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # load model
-
-svc = pickle.load(open('svc.pkl.pkl','rb'))
+filename = "svc.pkl"
+svc = pickle.load(open(filename, 'rb'))
 
 app = Flask(__name__)
 
