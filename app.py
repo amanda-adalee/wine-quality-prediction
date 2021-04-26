@@ -17,7 +17,9 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # load model
-#svc = pickle.load(open('svc.pkl','rb'))
+
+svc = pickle.load(open('svc.pkl.pkl','rb'))
+
 app = Flask(__name__)
 
 
@@ -73,11 +75,11 @@ def predict(facid, vacid, cacid, rs, ch, fsd, tsd, den, ph, sul, alc):
     user_data = [facid, vacid, cacid, rs, ch, fsd, tsd, den, ph, sul, alc]
     user_data_asarray = numpy.asarray(user_data)
     reshaped_data = user_data_asarray.reshape(1, -1)
-    # prediction = svc.predict(reshaped_data)
-    # if prediction[0] == 0:
-    #     return ("Poor Quality Wine")
-    # else:
-    #     return ("High Quality Wine")
+    prediction = svc.predict(reshaped_data)
+    if prediction[0] == 0:
+        return ("Poor Quality Wine")
+    else:
+        return ("High Quality Wine")
 
 
 if __name__ == "__main__":
