@@ -1,5 +1,3 @@
-import pathlib
-
 from flask import Flask, render_template, redirect, url_for, request
 
 import pickle
@@ -17,6 +15,7 @@ from sklearn.svm import SVC
 import ipywidgets
 import warnings
 warnings.filterwarnings('ignore')
+import pathlib
 
 # load model
 filename = "svc.pkl"
