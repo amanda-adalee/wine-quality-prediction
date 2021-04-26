@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title> Login </title>
+    </head>
+    
+    <body>
+    <div style="text-align:center;">
+        
+        <h2><strong>PLEASE SIGN IN</strong></h2>
+        <form action='/submit', method='post'>
+          <input type="text" id="username" name="username" placeholder="username"><br>
+          <br>
+          <input type="password" id="password" name="password" placeholder="password"><br>
+          <input type="checkbox" onclick="myPassword()">show password <br>
+          <p ><button class="w3-button w3-black" type="submit">SUBMIT</button></p> 
+        </form>       
+     </div>
+        
+<script>        
+function myPassword() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+        
+    </body>    
+</html>
