@@ -1,3 +1,5 @@
+import pathlib
+
 from flask import Flask, render_template, redirect, url_for, request
 
 import pickle
@@ -18,7 +20,8 @@ warnings.filterwarnings('ignore')
 
 # load model
 filename = "svc.pkl"
-svc = pickle.load(open(filename, 'rb'))
+abspath = pathlib.Path(filename).absolute()
+svc = pickle.load(open(str(abspath), 'rb'))
 
 app = Flask(__name__)
 
