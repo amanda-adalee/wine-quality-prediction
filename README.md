@@ -24,4 +24,4 @@ DATASET - The dataset used for this machine learning application was retrieved f
 MACHINE LEARNING - A 80/20 training and testing data split was used. Two classification models were implemented, k nearest neighbor and c-support vector. The c-support vector model provided the highest classification accuracy at 91%.
 
 ## Author
-Amanda Arreola, aarreo3@wgu.edu
+Amanda Arreola
