@@ -23,7 +23,8 @@ DATASET - The dataset used for this machine learning application was retrieved f
 MACHINE LEARNING - A 80/20 training and testing data split was used. Two classification models were implemented, k nearest neighbor and c-support vector. The c-support vector model provided the highest classification accuracy at 91%.
 
 ## Visual of Website
-![Wine Quality Prediction](https://github.com/amanda-adalee/wine-quality-prediction/assets/83192428/565e4c40-c7f0-42af-90a0-d5024cc840c0)
+![Wine Quality Prediction](https://github.com/amanda-adalee/wine-quality-prediction/assets/83192428/9974b6a4-19b4-4db8-99f8-fbd7f9a38495)
+
 
 ## Author
 Amanda Arreola
